@@ -1,10 +1,3 @@
-/*
- * Palette Graphique - prélude au projet multimodal 3A SRI
- * 4 objets gérés : cercle, rectangle(carré), losange et triangle
- * (c) 05/11/2019
- * Dernière révision : 28/04/2020
- */
- 
 import java.awt.Point;
 import fr.dgac.ivy.*;
 
@@ -13,7 +6,6 @@ private ArrayList<Forme> formes; // liste de formes stockées
 private FSM mae; // Finite Sate Machine
 private Data data;
 
-String message= "";
 Ivy bus;
 
 void setup() {
@@ -94,9 +86,10 @@ void draw() {
     case INITIAL:  // Etat INITIAL
       background(255);
       fill(0);
-      text("Etat initial (c(ercle)/l(osange)/r(ectangle)/t(riangle) pour créer la forme à la position courante)", 50,50);
-      text("m(ove)+ click pour sélectionner un objet et click pour sa nouvelle position", 50,80);
-      text("click sur un objet pour changer sa couleur de manière aléatoire", 50,110);
+      text("Veuillez énoncer votre demande. Voir exemple ci-dessous.", 50,50);
+      text("Voix : \"Créer <Forme> <Couleur> ici\" ; Click souris", 50,80);
+      text("Voix : \"Supprimer cette forme\" ; Click souris", 50,110);
+      text("Voix : \"Déplacer cette forme\" ; Click souris ; Voix : \"ici\" ; Clicks souris", 50,140);
       break;
       
     case PRE_FUSION:
@@ -111,19 +104,16 @@ void draw() {
       if (data.getAction() != null) {
         switch(data.getAction()) {
           case CREER:
-            //System.out.println("test");
             if (data.getForme() != null && data.getNbPositions() >= 1 && data.localisation) {
               mae = FSM.FUSION;
             }
             break;
           case SUPPRIMER:
-            //System.out.println("test");
             if ((data.getForme() != null || data.where) && data.getNbPositions() >= 1) {
               mae = FSM.FUSION;
             }
             break;
           case DEPLACER:
-            //System.out.println("test");
             if ((data.getForme() != null || data.where) && data.getNbPositions() >= 2 && data.localisation) {
               mae = FSM.FUSION;
             }
@@ -165,7 +155,6 @@ void draw() {
     default:
       break;
   }
-  //System.out.println("Nb formes = " + formes.size());
 }
 
 private void creer(Forme forme, Point p) {
@@ -198,9 +187,7 @@ private void deplacer(Point p1, Point p2) {
   if (forme == null) return;
   creer(forme, p2);
 }
-  
 
-// fonction d'affichage des formes m
 private void affiche() {
   background(255);
   for (int i=0;i<formes.size();i++)
