@@ -35,7 +35,7 @@ La classe Data permet de stocker toutes les informations nécessaires à la fusi
 
 # Machine à états
 
-![Untitled](Rapport%20IHM%20Multimodale%201cdaf88e64844e21a1fe027a06b13874/Untitled.png)
+![Untitled](images/Untitled.png)
 
 [https://lucid.app/lucidchart/316edef3-3426-4be1-b995-39c686fb520c/edit?beaconFlowId=D26E0A5DA75A602E&invitationId=inv_03a43988-23b1-4d41-b553-470e13521367&page=0_0#](https://lucid.app/lucidchart/316edef3-3426-4be1-b995-39c686fb520c/edit?beaconFlowId=D26E0A5DA75A602E&invitationId=inv_03a43988-23b1-4d41-b553-470e13521367&page=0_0#) à modifier si besoin
 
@@ -62,3 +62,7 @@ Résultat après avoir dit “Déplace ce triangle rouge ici” et deux clic : u
 ![Résultat après avoir dit “Supprime ce triangle” et un clic sur le triangle](images/Untitled%204.png)
 
 Résultat après avoir dit “Supprime ce triangle” et un clic sur le triangle
+
+# Exemple vidéo
+
+[https://www.youtube.com/watch?v=7Gak6B1yGxM](https://www.youtube.com/watch?v=7Gak6B1yGxM)
