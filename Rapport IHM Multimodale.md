@@ -4,10 +4,6 @@
 - Rémi Laborie
 
 [https://github.com/reminator329/TP_IHM_Multimodale](https://github.com/reminator329/TP_IHM_Multimodale)
-
-> **Sommaire**
-> 
-
 ---
 
 # Introduction
@@ -51,18 +47,18 @@ Nous n’avons pas eu le temps de gérer le cas où le moteur ne reçoit pas tou
 
 # Exemples d’utilisation
 
-![Écran d’accueil de l’application](Rapport%20IHM%20Multimodale%201cdaf88e64844e21a1fe027a06b13874/Untitled%201.png)
+![Écran d’accueil de l’application](images/Untitled%201.png)
 
 Écran d’accueil de l’application
 
-![Résultat après avoir dit “Créer un triangle rouge ici” et un clic](Rapport%20IHM%20Multimodale%201cdaf88e64844e21a1fe027a06b13874/Untitled%202.png)
+![Résultat après avoir dit “Créer un triangle rouge ici” et un clic](images/Untitled%202.png)
 
 Résultat après avoir dit “Créer un triangle rouge ici” et un clic
 
-![Résultat après avoir dit “Déplace ce triangle rouge ici” et deux clic : un sur le triangle et un sur la destination](Rapport%20IHM%20Multimodale%201cdaf88e64844e21a1fe027a06b13874/Untitled%203.png)
+![Résultat après avoir dit “Déplace ce triangle rouge ici” et deux clic : un sur le triangle et un sur la destination](images/Untitled%203.png)
 
 Résultat après avoir dit “Déplace ce triangle rouge ici” et deux clic : un sur le triangle et un sur la destination
 
-![Résultat après avoir dit “Supprime ce triangle” et un clic sur le triangle](Rapport%20IHM%20Multimodale%201cdaf88e64844e21a1fe027a06b13874/Untitled%204.png)
+![Résultat après avoir dit “Supprime ce triangle” et un clic sur le triangle](images/Untitled%204.png)
 
 Résultat après avoir dit “Supprime ce triangle” et un clic sur le triangle
