@@ -4,7 +4,7 @@
 - Rémi Laborie
 
 [https://github.com/reminator329/TP_IHM_Multimodale](https://github.com/reminator329/TP_IHM_Multimodale)
----
+
 
 # Introduction
 
@@ -12,8 +12,7 @@ Le but de ce projet est de spécifier, concevoir et implémenter un moteur de fu
 
 # Utilisation de l’application
 
-Nous avons choisi trois action possibles qui sont : créer, déplacer et supprimer 
-quatre formes possibles : losange, triangle, rectangle et cercle
+Nous avons choisi trois action possibles qui sont : créer, déplacer et supprimer, quatre formes possibles : losange, triangle, rectangle et cercle
 et trois couleurs : rouge, vert et bleu sinon gris par défaut.
 
 # Chronogrammes
@@ -35,31 +34,33 @@ La classe Data permet de stocker toutes les informations nécessaires à la fusi
 
 # Machine à états
 
-![Untitled](images/Untitled.png)
+![Untitled](../images/Untitled.png)
 
-[https://lucid.app/lucidchart/316edef3-3426-4be1-b995-39c686fb520c/edit?beaconFlowId=D26E0A5DA75A602E&invitationId=inv_03a43988-23b1-4d41-b553-470e13521367&page=0_0#](https://lucid.app/lucidchart/316edef3-3426-4be1-b995-39c686fb520c/edit?beaconFlowId=D26E0A5DA75A602E&invitationId=inv_03a43988-23b1-4d41-b553-470e13521367&page=0_0#) à modifier si besoin
+Première étape à faire c’est de lancer sra5 avec la grammaire parole, pour récupérer la voix sur le bus Ivy.
 
-Nous avons 4 états possible; init c’est l’état d’initialisation (affichage de l’application) en cliquant nous aurons accès à un tableau blanc afin de faire les actions possibles qui nous mène à l’état pré-fusion le moteur écoute ce qu’on lui dit de faire, s’il arrive à reconnaitre l’action (la commande) il passe à l’état possible-fusion tout en continuant à écouter pour recevoir le reste des informations importantes (forme, couleur..ect).
+Nous avons 4 états possible. Init est l’état d’initialisation (affichage de l’application) avec un clic de souris nous aurons accès à un tableau blanc et l’application commence à écouter les différents événements (voix et clics), ce qui nous mène à l’état pré-fusion.
 
-Si tout s’est bien passé (action réalisée) nous retournons à l’état de pré-fusion.
+Ici l’utilisateur parle et dit ce qu’il souhaite faire. L’application reste sur le tableau blanc tout en écoutant les événements. L’action parole permet de récupérer toutes les informations dites par l’utilisateur. Lorsque l’on reçoit une phrase, on passe à l’état possible-fusion.
 
-Nous n’avons pas eu le temps de gérer le cas où le moteur ne reçoit pas toutes les informations, dans ce cas l’application reste en attente.
+Cet état permet de vérifier la cohérence des informations données par les différentes modalités. De plus, si les informations disponibles dans cet état ne sont pas suffisantes ou cohérentes, l’application continue d’enregistrer les nouvelles informations qui peuvent apparaître (les clics pour notre application par exemple). Concernant la voix, l’application enregistre une nouvelle action en supposant que la précédente est incohérente car trop longue. Une fois que les informations sont cohérentes on passe à l’état fusion.
+
+Celui-ci permet de faire la commande demandée par l’utilisateur. Une fois l’action réalisée, on retourne à l’état de pré-fusion.
 
 # Exemples d’utilisation
 
-![Écran d’accueil de l’application](images/Untitled%201.png)
+![Écran d’accueil de l’application](../images/Untitled%201.png)
 
 Écran d’accueil de l’application
 
-![Résultat après avoir dit “Créer un triangle rouge ici” et un clic](images/Untitled%202.png)
+![Résultat après avoir dit “Créer un triangle rouge ici” et un clic](../images/Untitled%202.png)
 
 Résultat après avoir dit “Créer un triangle rouge ici” et un clic
 
-![Résultat après avoir dit “Déplace ce triangle rouge ici” et deux clic : un sur le triangle et un sur la destination](images/Untitled%203.png)
+![Résultat après avoir dit “Déplace ce triangle rouge ici” et deux clic : un sur le triangle et un sur la destination](../images/Untitled%203.png)
 
 Résultat après avoir dit “Déplace ce triangle rouge ici” et deux clic : un sur le triangle et un sur la destination
 
-![Résultat après avoir dit “Supprime ce triangle” et un clic sur le triangle](images/Untitled%204.png)
+![Résultat après avoir dit “Supprime ce triangle” et un clic sur le triangle](../images/Untitled%204.png)
 
 Résultat après avoir dit “Supprime ce triangle” et un clic sur le triangle
 
